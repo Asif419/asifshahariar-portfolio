@@ -9,21 +9,33 @@ export default function Education() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-8">Education</h2>
 
-        <div className="flex flex-col gap-8 text-left">
-          <div className="border-l-4 border-blue-600 pl-4">
-            <h3 className="text-xl font-semibold text-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Tampere University Card (Left) */}
+          <div className="bg-white p-6 border-2 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <img
+              src="/assets/images/tampere.png"
+              alt="Tampere University"
+              className="w-32 h-32 mb-4 rounded-full object-cover transition-all duration-300 hover:scale-110"
+            />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2 transition-all duration-300 hover:text-blue-600">
               MSc in Data Science
             </h3>
-            <p className="text-gray-600">Tampere University, Finland</p>
-            <p className="text-sm text-gray-500">2023 – 2025 (Thesis ongoing)</p>
+            <p className="text-gray-600 transition-all duration-300 hover:text-gray-800">Tampere University, Finland</p>
+            <p className="text-sm text-gray-500 transition-all duration-300 hover:text-gray-700">2023 – 2025 (Thesis ongoing)</p>
           </div>
 
-          <div className="border-l-4 border-blue-600 pl-4">
-            <h3 className="text-xl font-semibold text-gray-800">
+          {/* Daffodil International University Card (Right) */}
+          <div className="bg-white p-6 border-2 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <img
+              src="/assets/images/daffodil.png"
+              alt="Daffodil International University"
+              className="w-32 h-32 mb-4 rounded-full object-cover transition-all duration-300 hover:scale-110"
+            />
+            <h3 className="text-xl font-semibold text-gray-800 mb-2 transition-all duration-300 hover:text-blue-600">
               BSc in Computer Science and Engineering
             </h3>
-            <p className="text-gray-600">Daffodil International University, Bangladesh</p>
-            <p className="text-sm text-gray-500">Completed: 2022</p>
+            <p className="text-gray-600 transition-all duration-300 hover:text-gray-800">Daffodil International University, Bangladesh</p>
+            <p className="text-sm text-gray-500 transition-all duration-300 hover:text-gray-700">Completed: 2022</p>
           </div>
         </div>
       </div>

@@ -11,14 +11,14 @@ import Experience from "@/components/sections/Experience";
 
 export default function Home() {
   return (
-    <>
+    <div className="w-full max-w-5xl px-4 sm:px-6 lg:px-0 mx-auto">
       <Hero />
-      <About />
       <Education />
+      {/* <About /> */}
       <Skills />
-      <Experience />
       <Projects />
+      <Experience />
       <Contact />
-    </>
+    </div>
   )
 }

@@ -1,36 +1,75 @@
 'use client'
-
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
 
 export default function Hero() {
+  const [hoverImage, setHoverImage] = useState(false);
+  const [hoverText, setHoverText] = useState(false);
+  const [hoverButton, setHoverButton] = useState(false);
+
   return (
     <section
       id="hero"
-      className="w-full min-h-[90vh] flex items-center justify-center bg-white px-6 text-center"
+      className="w-full min-h-[90vh] flex items-center justify-center bg-white px-6 py-12"
     >
-      <div className="max-w-3xl">
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 leading-tight mb-4">
-          Hi, I'm <span className="text-blue-600">Asif Shahariar</span>
-        </h1>
-        <h2 className="text-lg sm:text-xl text-gray-600 mb-6">
-          Full-stack Developer • MSc in Data Science at Tampere University
-        </h2>
-        <p className="text-gray-500 mb-8">
-          I build fast, scalable, and user-friendly web applications using modern JavaScript technologies like React, Next.js, and Node.js.
-        </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Button asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              Download Resume
+      <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center gap-12">
+        {/* Left Side: Text */}
+        <div
+          className="flex-1 text-center lg:text-left space-y-6 group"
+          onMouseEnter={() => setHoverText(true)}
+          onMouseLeave={() => setHoverText(false)}
+        >
+          <h1
+            className={`text-4xl sm:text-5xl font-bold text-gray-900 leading-tight transition-all duration-500 ease-in-out ${
+              hoverText ? "text-5xl" : ""
+            }`}
+          >
+            Asif Shahariar
+          </h1>
+          <h2 className={`text-lg text-gray-600 font-semibold uppercase tracking-wide transition-all ease-in-out duration-200 ${
+            hoverText || hoverImage ? "text-xl font-bold" : ""
+          }`}>
+            Full-stack Developer
+          </h2>
+          <p
+            className={`text-gray-600 max-w-xl transition-all duration-500 ease-in-out ${
+              hoverText || hoverImage ? "text-yello-700 text-xl" : ""
+            }`}
+          >
+            Passionate developer from Bangladesh, currently studying MSc in Data Science at Tampere University. Skilled in building fast and scalable web applications using modern technologies.
+          </p>
+          <div>
+            <a
+              href="#contact"
+              onMouseEnter={() => setHoverButton(true)}
+              onMouseLeave={() => setHoverButton(false)}
+              className="inline-block border border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110"
+            >
+              Let's talk
             </a>
-          </Button>
-          <Button variant="outline" asChild>
-            <a href="#contact">
-              Contact Me
-            </a>
-          </Button>
+          </div>
+        </div>
+
+        {/* Right Side: Image */}
+        <div
+          className="flex justify-center"
+          onMouseEnter={() => setHoverImage(true)}
+          onMouseLeave={() => setHoverImage(false)}
+        >
+          <img
+            src={
+              hoverButton
+                ? "/assets/images/asif-avatar-3.png"
+                : hoverText || hoverImage
+                ? "/assets/images/asif-avatar-2.png"
+                : "/assets/images/asif-avatar.png"
+            }
+            alt="Asif Shahariar"
+            className={`max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out ${
+              hoverText || hoverImage ? "scale-110" : ""
+            }`}
+          />
         </div>
       </div>
     </section>
-  )
+  );
 }
