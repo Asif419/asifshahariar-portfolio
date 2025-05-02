@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <div className="w-full max-w-5xl px-4 sm:px-6 lg:px-0 mx-auto">
       <Hero />
+      <About />
       <Education />
-      {/* <About /> */}
       <Skills />
       <Projects />
       <Experience />

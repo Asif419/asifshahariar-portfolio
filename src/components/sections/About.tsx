@@ -1,29 +1,22 @@
 'use client'
 
-import { useState } from 'react';
-
 export default function About() {
-  const [isHovered, setIsHovered] = useState(false);
 
   return (
     <section
       id="about"
-      className="w-full py-20 px-6 bg-gray-50 text-center scroll-mt-20"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      className="w-full py-20 px-6 bg-gray-50 text-center scroll-mt-20 shadow-2xl"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center group">
         {/* Left Side: About Text */}
         <div className="lg:col-span-3 space-y-6 text-center lg:text-left relative">
           <h2
-            className={`text-3xl font-bold text-gray-900 transition-all duration-700 ease-in-out ${
-              isHovered ? 'opacity-0' : 'opacity-100'
-            }`}
+            className={`text-3xl text-center font-bold text-gray-900 py-2 px-4 border-2 border-b-2 group-hover:border-gray-300 transition-all duration-300 rounded-full`}
           >
             About Me
           </h2>
           {/* Image that replaces the text on hover */}
-          <div
+          {/* <div
             className={`absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-700 ease-in-out ${
               isHovered ? 'opacity-100' : 'opacity-0'
             }`}
@@ -33,7 +26,7 @@ export default function About() {
               alt="Asif Shahariar"
               className="w-48 h-48 object-cover rounded-full border-4 border-white shadow-lg"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Vertical Divider */}

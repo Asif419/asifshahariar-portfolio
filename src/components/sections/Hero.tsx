@@ -52,8 +52,6 @@ export default function Hero() {
         {/* Right Side: Image */}
         <div
           className="flex justify-center"
-          onMouseEnter={() => setHoverImage(true)}
-          onMouseLeave={() => setHoverImage(false)}
         >
           <img
             src={
