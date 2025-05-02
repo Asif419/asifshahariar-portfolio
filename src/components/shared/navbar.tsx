@@ -5,12 +5,12 @@ import Link from "next/link"
 import { useState } from "react"
 
 const sections = [
-  { label: "About", href: "#about" },
-  { label: "Educaiton", href: "#education" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "📄 About", href: "#about" },
+  { label: "🎓 Education", href: "#education" },
+  { label: "🧠 Skills", href: "#skills" },
+  { label: "💼 Experience", href: "#experience" },
+  { label: "🚀 Projects", href: "#projects" },
+  { label: "💬 Let's Talk", href: "#contact" },
 ]
 
 export default function Navbar() {
@@ -27,20 +27,23 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 z-50 w-full bg-white border-b ${scrolled ? 'shadow-sm' : ''}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#hero" className="text-xl font-bold text-gray-900">Asif Shahariar</a>
+        <div className="group/nav flex items-center w-full justify-between">
+          <div className="flex items-center">
+            <a href="#hero" className="text-xl font-bold text-gray-900 transition-all duration-200 ease-in-out group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:font-bold hover:text-2xl">Asif Shahariar</a>
+          </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-6">
-          {sections.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-gray-700 hover:text-black text-sm font-medium transition"
-            >
-              {item.label}
-            </a>
-          ))}
-        </nav>
+          <div className="hidden lg:flex gap-6 group">
+            {sections.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-gray-700 border border-transparent hover:border-gray-400 hover:text-blue-600 font-medium transition-all duration-200 ease-in-out px-2 py-1 rounded-3xl transform group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:text-xl hover:font-bold"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
@@ -51,12 +54,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Resume Button */}
-        <div className="hidden md:block">
-          <Button asChild>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
-          </Button>
-        </div>
       </div>
 
       {/* Mobile Navigation */}
@@ -69,20 +66,19 @@ export default function Navbar() {
           />
           {/* Mobile Navigation Menu */}
           <div className="absolute z-50 left-4 right-4 mt-2 bg-white rounded-md shadow-md p-4 md:hidden">
-            <nav className="flex flex-col gap-3">
-              {sections.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="text-gray-700 hover:text-black text-sm font-medium transition"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-              <Button asChild>
-                <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">Download Resume</a>
-              </Button>
+            <nav className="flex flex-col group gap-6">
+              <div className="group flex gap-6 flex-col">
+                {sections.map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    className="text-gray-700 border border-transparent hover:border-gray-400 hover:text-blue-600 hover:text-lg font-medium transition-all duration-200 ease-in-out px-2 py-1 rounded-xl transform group-hover:scale-95 hover:scale-110"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </div>
             </nav>
           </div>
         </>
