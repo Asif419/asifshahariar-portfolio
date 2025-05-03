@@ -16,7 +16,7 @@ export default function SkillsLanguages() {
     <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-7">
       {/* Left Side: Languages Title with Outer Line */}
       <div className="flex items-center pl-4 w-full md:w-[35%] justify-center">
-        <h3 className="text-xl font-semibold text-gray-800 py-2 px-4 border-2 border-gray-300 rounded-full">
+        <h3 className="text-sm md:text-xl font-semibold text-gray-800 py-2 px-4 border-2 border-gray-300 rounded-full">
           Languages
         </h3>
       </div>

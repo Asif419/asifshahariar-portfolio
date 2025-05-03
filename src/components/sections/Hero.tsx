@@ -20,7 +20,7 @@ export default function Hero() {
 
         >
           <h1
-            className={`text-4xl md:text-6xl font-bold text-gray-900 leading-tight transition-all duration-500 ease-in-out ${hoverText ? "" : ""
+            className={`text-3xl md:text-6xl font-bold text-gray-900 leading-tight transition-all duration-500 ease-in-out ${hoverText ? "" : ""
               }`}
           >
             Asif Shahariar
@@ -30,25 +30,25 @@ export default function Hero() {
             Full-stack Developer
           </h2>
           <p
-            className={`text-gray-600 text-lg max-w-xl transition-all duration-500 ease-in-out ${hoverText ? "" : ""}`}
+            className={`text-gray-600 text-sm md:text-lg max-w-xl transition-all duration-500 ease-in-out ${hoverText ? "" : ""}`}
             onMouseEnter={() => setHoverText(true)}
           >
             Passionate developer from Bangladesh, currently studying MSc in Data Science at Tampere University. Skilled in building fast and scalable web applications using modern technologies.
           </p>
-          <div className="flex gap-6"
+          <div className="flex items-center md:items-start justify-center md:justify-start gap-6"
             onMouseEnter={() => setHoverButton(true)}
             onMouseLeave={() => setHoverButton(false)}
           >
             <a
               href="#contact"
-              className={`inline-block border border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 ${hoverText ? "border-gray-400" : ""}`}
+              className={`inline-block border text-sm md:text-base border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 ${hoverText ? "border-gray-400" : ""}`}
             >
               Let&apos;s talk
             </a>
             <a
               href="/assets/resume.pdf"
               download
-              className={`inline-block border border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 ${hoverText ? "border-gray-400" : ""}`}
+              className={`inline-block border text-sm md:text-base border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 ${hoverText ? "border-gray-400" : ""}`}
             >
               Download Resume
             </a>

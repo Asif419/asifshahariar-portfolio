@@ -38,7 +38,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
         <div className="group/nav flex items-center w-full justify-between">
           <div className="flex items-center">
-            <a href="#hero" className="text-xl font-bold text-gray-900 transition-all duration-200 ease-in-out group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:font-bold hover:text-2xl">Asif Shahariar</a>
+            <a href="#hero" className="text:sm md:text-xl font-bold text-gray-900 transition-all duration-200 ease-in-out group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:font-bold hover:text-lg hover:md:text-2xl">Asif Shahariar</a>
           </div>
 
           <div className="hidden lg:flex gap-6 group">
@@ -46,7 +46,7 @@ export default function Navbar() {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-gray-700 border border-transparent hover:border-gray-400 hover:text-blue-600 font-medium transition-all duration-200 ease-in-out px-2 py-1 rounded-3xl transform group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:text-xl hover:font-bold"
+                className="text-sm md:text-lg text-gray-700 border border-transparent hover:border-gray-400 hover:text-blue-600 font-medium transition-all duration-200 ease-in-out px-2 py-1 rounded-3xl transform group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:md:text-xl hover:font-bold"
               >
                 {item.label}
               </a>

@@ -13,7 +13,7 @@ export default function About() {
         {/* Left Side: About Text */}
         <div className="lg:col-span-3 space-y-6 text-center lg:text-left relative">
           <h2
-            className={`text-2xl text-center font-bold text-gray-900 py-2 px-4 border-2 border-b-2 group-hover:border-gray-300 group-hover:text-3xl transition-all duration-500 rounded-full`}
+            className={`text-lg md:text-2xl text-center font-bold text-gray-900 py-2 px-4 border-2 border-b-2 group-hover:border-gray-300 group-hover:md:text-3xl transition-all duration-500 rounded-full`}
           >
             About Me
           </h2>
@@ -35,7 +35,7 @@ export default function About() {
 
         {/* Right Side: Description */}
         <div className="lg:col-span-8 text-lg text-gray-700 leading-relaxed">
-          <p className="md:text-justify lg:text-left">
+          <p className="text-sm md:text-lg md:text-justify lg:text-left">
             I am Asif Shahariar, a passionate Full-stack Developer currently completing my MSc in Data Science at Tampere University, Finland.
             I have hands-on experience building scalable web applications using technologies like React, Node.js, TypeScript, and Next.js.
             Previously, I worked as a Software Engineer at ULTRA-X BD and contributed to academic research published by IEEE.

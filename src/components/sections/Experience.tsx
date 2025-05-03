@@ -50,7 +50,7 @@ export default function Experience() {
   return (
     <section id="experience" className="w-full py-20 px-6 bg-white text-center scroll-mt-20">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Experience</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-12">Experience</h2>
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Side (Designation) */}
@@ -70,7 +70,7 @@ export default function Experience() {
                 setContentCreator(false);
               }}
             >
-              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:text-2xl transition-all duration-500 ease-in-out ${hoverTeachingAssistant ? "border-gray-300 text-2xl text-blue-600" : 'text-xl'
+              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:md:text-2xl transition-all duration-500 ease-in-out ${hoverTeachingAssistant ? "border-gray-300 text-sm md:text-2xl text-blue-600" : 'text-xs md:text-xl'
                 }`}>Teaching Assitant</p>
             </div>
             <div
@@ -88,7 +88,7 @@ export default function Experience() {
                 setContentCreator(false);
               }}
             >
-              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:text-2xl transition-all duration-500 ease-in-out ${hoverSoftwareEngineer ? "border-gray-300 text-2xl text-blue-600" : 'text-xl'
+              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:md:text-2xl transition-all duration-500 ease-in-out ${hoverSoftwareEngineer ? "border-gray-300 text-sm md:text-2xl text-blue-600" : 'text-xs md:text-xl'
                 }`}>Software Engineer</p>
             </div>
             <div
@@ -106,18 +106,18 @@ export default function Experience() {
                 setContentCreator(true);
               }}
             >
-              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:text-2xl transition-all duration-500 ease-in-out ${hoverContentCreator ? "border-gray-300 text-2xl" : 'text-xl'
+              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:md:text-2xl transition-all duration-500 ease-in-out ${hoverContentCreator ? "border-gray-300 textsm md:text-2xl" : 'text-sm md:text-xl'
                 }`}>Content Creator</p>
             </div>
           </div>
 
           {/* Right Side (Details of Job) */}
           <div className="md:w-2/3 flex items-center justify-center transition-all duration-500 ease-in-out">
-            <div className="border-t-4 md:border-l-4 border-gray-600 pl-4 bg-white p-6 rounded-md shadow-md w-full max-w-lg">
-              <h3 className="text-xl font-semibold text-gray-800">{jobs[selectedJob].title}</h3>
-              <p className="text-gray-600">{jobs[selectedJob].company}</p>
-              <p className="text-sm text-gray-500">{jobs[selectedJob].date}</p>
-              <ul className="list-disc list-inside mt-2 text-gray-600 text-sm space-y-1">
+            <div className="border-t-2 md:border-l-4 md:border-t-0 border-gray-600 pl-4 bg-white p-6 rounded-md shadow-md w-full max-w-lg">
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800">{jobs[selectedJob].title}</h3>
+              <p className="text-sm md:text-base text-gray-600">{jobs[selectedJob].company}</p>
+              <p className="text-xs md:text-sm text-gray-500">{jobs[selectedJob].date}</p>
+              <ul className="text-[10px] md:text-sm list-disc list-inside mt-2 text-gray-600 space-y-1">
                 {jobs[selectedJob].description.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}

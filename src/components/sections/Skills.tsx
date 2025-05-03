@@ -14,7 +14,7 @@ export default function Skills() {
       className="w-full py-20 px-6 bg-white text-center scroll-mt-20"
     >
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Skills & Technologies</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-12">Skills & Technologies</h2>
         <SkillsLanguages />
         <SkillsFrontend />
         <SkillsBackend />

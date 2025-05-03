@@ -29,7 +29,7 @@ export default function Projects() {
       className="w-full py-20 px-6 bg-gray-50 text-center mb-12 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">Projects</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6">Projects</h2>
 
         <div className="grid grid-cols-1 gap-8 justify-center text-center mb-5">
           {projects.map((project) => (
@@ -50,8 +50,8 @@ export default function Projects() {
                 </div>
                 {/* Right Side - Description and Tech */}
                 <div className="w-full md:w-2/3 text-left">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-3">{project.description}</p>
+                  <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
+                  <p className="text-sm md:text-base text-gray-600 mb-3">{project.description}</p>
                   {/* Tech Stack */}
                   <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500 mb-4">
                     {project.tech.map((tech) => (
@@ -65,7 +65,7 @@ export default function Projects() {
                   </div>
                   {/* View Button */}
                   <a
-                    className="inline-block border border-blue-600 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 group-hover:scale-105"
+                    className="text-sm md:text-base inline-block border border-blue-600 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 group-hover:scale-105"
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"

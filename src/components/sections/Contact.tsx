@@ -22,8 +22,8 @@ export default function Contact() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
         {
-          name: data.name, 
-          email: data.email, 
+          name: data.name,
+          email: data.email,
           message: data.message,
         }, // Ensure the field names match with the template parameters
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
@@ -56,7 +56,7 @@ export default function Contact() {
     >
       {/* Left Side - Contact Form */}
       <div>
-        <h2 className="text-3xl font-bold text-gray-900 mb-12">Contact Me</h2>
+        <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-12">Contact Me</h2>
 
         <div className="max-w-2xl mx-auto flex flex-col md:flex-row gap-8">
           <div className="md:w-3/5 flex flex-col items-center gap-6">
@@ -66,7 +66,7 @@ export default function Contact() {
                   type="text"
                   placeholder="Your Name"
                   {...register("name", { required: true })}
-                  className="w-full p-3 border-b-2 border-gray-200 shadow-2xl hover:border-gray-300 hover:rounded-2xl focus:outline-none focus:border-gray-500 focus:rounded-2xl"
+                  className="w-full p-3 border-b-2 border-gray-200 shadow-2xl hover:border-gray-300 hover:rounded-2xl focus:outline-none focus:border-gray-500 focus:rounded-2xl text-sm sm:text-base"
                 />
               </div>
               <div className="mb-6">
@@ -74,14 +74,14 @@ export default function Contact() {
                   type="email"
                   placeholder="Your Email"
                   {...register("email", { required: true })}
-                  className="w-full p-3 border-b-2 border-gray-200 shadow-2xl hover:border-gray-300 hover:rounded-2xl  focus:outline-none focus:border-gray-500 focus:rounded-2xl"
+                  className="w-full p-3 border-b-2 border-gray-200 shadow-2xl hover:border-gray-300 hover:rounded-2xl  focus:outline-none focus:border-gray-500 focus:rounded-2xl text-sm sm:text-base"
                 />
               </div>
               <div className="mb-6">
                 <textarea
                   placeholder="Message"
                   {...register("message", { required: true })}
-                  className="w-full p-3 border-b-2 border-gray-200 shadow-2xl hover:border-gray-300 hover:rounded-2xl  focus:outline-none focus:border-gray-500 focus:rounded-2xl"
+                  className="w-full p-3 border-b-2 border-gray-200 shadow-2xl hover:border-gray-300 hover:rounded-2xl  focus:outline-none focus:border-gray-500 focus:rounded-2xl text-sm sm:text-base"
                 ></textarea>
               </div>
               <button
