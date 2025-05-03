@@ -31,6 +31,8 @@ export default function SkillsLanguages() {
               className="inline-block p-3 rounded-full cursor-pointer transition-all mb-2"
             >
               <Image
+                width={128}
+                height={128}
                 src={item.icon}
                 alt={item.name}
                 className="w-12 h-12 object-cover rounded-full"

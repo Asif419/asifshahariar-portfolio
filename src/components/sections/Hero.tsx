@@ -52,16 +52,11 @@ export default function Hero() {
           className="flex justify-center"
         >
           <Image
-            src={
-              hoverButton
-                ? "/assets/images/asif-avatar-3.png"
-                : hoverText || hoverImage
-                  ? "/assets/images/asif-avatar-2.png"
-                  : "/assets/images/asif-avatar.png"
-            }
+            width={300} // Set the width you want
+            height={300} // Set the height you want
+            src={hoverButton ? "/assets/images/asif-avatar-3.png" : hoverText || hoverImage ? "/assets/images/asif-avatar-2.png" : "/assets/images/asif-avatar.png"}
             alt="Asif Shahariar"
-            className={`max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out ${hoverText || hoverImage ? "scale-110" : ""
-              }`}
+            className="max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out"
           />
           {/* <img
             src={
