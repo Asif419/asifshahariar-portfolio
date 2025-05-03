@@ -1,5 +1,7 @@
 'use client'
 
+import Image from "next/image"
+
 export default function Education() {
   return (
     <section
@@ -12,11 +14,12 @@ export default function Education() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Tampere University Card (Left) */}
           <div className="bg-white p-6 border-2 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            <img
+            <Image
+              width={128}
+              height={128}
               src="/assets/images/tampere.png"
               alt="Tampere University"
-              className="w-32 h-32 mb-4 rounded-full object-cover transition-all duration-300 group-hover:w-40 group-hover:h-40 group-hover:mb-6 group-hover:-translate-y-4"
-            />
+              className="w-32 h-32 mb-4 rounded-full object-cover transition-all duration-300 group-hover:w-40 group-hover:h-40 group-hover:mb-6 group-hover:-translate-y-4" />
             <h3 className="text-xl font-semibold text-gray-800 mb-2 transition-all duration-300 group-hover:text-blue-600 group-hover:text-3xl">
               MSc in Data Science
             </h3>
@@ -26,7 +29,9 @@ export default function Education() {
 
           {/* Daffodil International University Card (Right) */}
           <div className="bg-white p-6 border-2 rounded-lg shadow-md flex flex-col items-center transition-all duration-300 hover:scale-105 hover:shadow-xl group">
-            <img
+            <Image
+              width={128}
+              height={128}
               src="/assets/images/daffodil.png"
               alt="Daffodil International University"
               className="w-32 h-32 mb-4 rounded-full object-cover transition-all duration-300 group-hover:w-40 group-hover:h-40 group-hover:mb-6 group-hover:-translate-y-4"

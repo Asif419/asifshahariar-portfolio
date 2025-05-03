@@ -11,7 +11,7 @@ export default function Contact() {
       <div className="max-w-xl mx-auto">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Contact Me</h2>
         <p className="text-gray-600 mb-8 text-lg">
-          I'm currently open to full-stack developer roles in Europe. Feel free to reach out!
+          I am currently open to full-stack developer roles in Europe. Feel free to reach out!
         </p>
 
         <div className="flex flex-col items-center gap-4">

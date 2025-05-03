@@ -1,8 +1,9 @@
 'use client'
+import Image from "next/image";
 import { useState } from "react";
 
 export default function Hero() {
-  const [hoverImage, setHoverImage] = useState(false);
+  const [hoverImage] = useState(false);
   const [hoverText, setHoverText] = useState(false);
   const [hoverButton, setHoverButton] = useState(false);
 
@@ -19,21 +20,18 @@ export default function Hero() {
           onMouseLeave={() => setHoverText(false)}
         >
           <h1
-            className={`text-4xl sm:text-5xl font-bold text-gray-900 leading-tight transition-all duration-500 ease-in-out ${
-              hoverText ? "text-5xl" : ""
-            }`}
+            className={`text-4xl sm:text-5xl font-bold text-gray-900 leading-tight transition-all duration-500 ease-in-out ${hoverText ? "text-5xl" : ""
+              }`}
           >
             Asif Shahariar
           </h1>
-          <h2 className={`text-lg text-gray-600 font-semibold uppercase tracking-wide transition-all ease-in-out duration-200 ${
-            hoverText || hoverImage ? "text-xl font-bold" : ""
-          }`}>
+          <h2 className={`text-lg text-gray-600 font-semibold uppercase tracking-wide transition-all ease-in-out duration-200 ${hoverText || hoverImage ? "text-xl font-bold" : ""
+            }`}>
             Full-stack Developer
           </h2>
           <p
-            className={`text-gray-600 max-w-xl transition-all duration-500 ease-in-out ${
-              hoverText || hoverImage ? "text-yello-700 text-xl" : ""
-            }`}
+            className={`text-gray-600 max-w-xl transition-all duration-500 ease-in-out ${hoverText || hoverImage ? "text-yello-700 text-xl" : ""
+              }`}
           >
             Passionate developer from Bangladesh, currently studying MSc in Data Science at Tampere University. Skilled in building fast and scalable web applications using modern technologies.
           </p>
@@ -44,7 +42,7 @@ export default function Hero() {
               onMouseLeave={() => setHoverButton(false)}
               className="inline-block border border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110"
             >
-              Let's talk
+              Let&apos;s talk
             </a>
           </div>
         </div>
@@ -53,19 +51,30 @@ export default function Hero() {
         <div
           className="flex justify-center"
         >
-          <img
+          <Image
             src={
               hoverButton
                 ? "/assets/images/asif-avatar-3.png"
                 : hoverText || hoverImage
-                ? "/assets/images/asif-avatar-2.png"
-                : "/assets/images/asif-avatar.png"
+                  ? "/assets/images/asif-avatar-2.png"
+                  : "/assets/images/asif-avatar.png"
             }
             alt="Asif Shahariar"
-            className={`max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out ${
-              hoverText || hoverImage ? "scale-110" : ""
-            }`}
+            className={`max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out ${hoverText || hoverImage ? "scale-110" : ""
+              }`}
           />
+          {/* <img
+            src={
+              hoverButton
+                ? "/assets/images/asif-avatar-3.png"
+                : hoverText || hoverImage
+                  ? "/assets/images/asif-avatar-2.png"
+                  : "/assets/images/asif-avatar.png"
+            }
+            alt="Asif Shahariar"
+            className={`max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out ${hoverText || hoverImage ? "scale-110" : ""
+              }`}
+          /> */}
         </div>
       </div>
     </section>

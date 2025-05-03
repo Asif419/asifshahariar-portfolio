@@ -35,10 +35,10 @@ export default function About() {
         {/* Right Side: Description */}
         <div className="lg:col-span-8 text-lg text-gray-700 leading-relaxed">
           <p className="md:text-justify lg:text-left">
-            I'm Asif Shahariar, a passionate Full-stack Developer currently completing my MSc in Data Science at Tampere University, Finland.
+            I am Asif Shahariar, a passionate Full-stack Developer currently completing my MSc in Data Science at Tampere University, Finland.
             I have hands-on experience building scalable web applications using technologies like React, Node.js, TypeScript, and Next.js.
             Previously, I worked as a Software Engineer at ULTRA-X BD and contributed to academic research published by IEEE.
-            I'm driven by clean code, efficient problem-solving, and building user-focused solutions.
+            I am driven by clean code, efficient problem-solving, and building user-focused solutions.
           </p>
         </div>
       </div>
