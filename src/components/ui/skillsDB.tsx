@@ -2,24 +2,24 @@
 
 import { motion } from "framer-motion"
 
-const Backend = [
-  { name: 'Node.js', icon: '/assets/icons/node.png', expertise: 5 },
-  { name: 'Express.js', icon: '/assets/icons/express.png', expertise: 4 },
+const Databases = [
+  { name: 'MongoDB', icon: '/assets/icons/mongodb.png', expertise: 4 },
+  { name: 'MySQL', icon: '/assets/icons/mysql.png', expertise: 4 },
 ]
 
-export default function SkillsBackend() {
+export default function SkillsDB() {
     return (
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-7">
           {/* Left Side: Languages Title with Outer Line */}
           <div className="flex items-center pl-4 w-full md:w-[35%] justify-center">
             <h3 className="text-xl font-semibold text-gray-800 py-2 px-4 border-2 border-gray-300 rounded-full">
-              Back-end
+              Databases
             </h3>
           </div>
     
           {/* Right Side: Languages List with Hover Effects */}
           <div className="flex flex-wrap gap-4 justify-center w-full md:w-[65%]">
-            {Backend.map((item) => (
+            {Databases.map((item) => (
               <div key={item.name} className="group relative flex flex-col items-center w-1/2 sm:w-1/2 md:w-auto">
                 {/* Language icon */}
                 <motion.div

@@ -27,7 +27,7 @@ export default function SkillsFrontend() {
                 {/* Language icon */}
                 <motion.div
                   whileHover={{ scale: 1.1 }}
-                  className="inline-block p-3 rounded-full cursor-pointer transition-all"
+                  className="inline-block p-3 rounded-full cursor-pointer transition-all mb-2"
                 >
                   <img
                     src={item.icon}

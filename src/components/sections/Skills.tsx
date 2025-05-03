@@ -1,8 +1,10 @@
 'use client'
 
-import SkillsLanguages from "../ui/skillLanguages"
+import SkillsLanguages from "../ui/skillsLanguages"
 import SkillsBackend from "../ui/skillsBackend"
+import SkillsDB from "../ui/skillsDB"
 import SkillsFrontend from "../ui/skillsFrontend"
+import SkillsTools from "../ui/skillstools"
 
 
 export default function Skills() {
@@ -16,6 +18,8 @@ export default function Skills() {
         <SkillsLanguages />
         <SkillsFrontend />
         <SkillsBackend />
+        <SkillsDB />
+        <SkillsTools />
       </div>
     </section>
   )

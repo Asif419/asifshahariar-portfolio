@@ -11,7 +11,7 @@ export default function About() {
         {/* Left Side: About Text */}
         <div className="lg:col-span-3 space-y-6 text-center lg:text-left relative">
           <h2
-            className={`text-3xl text-center font-bold text-gray-900 py-2 px-4 border-2 border-b-2 group-hover:border-gray-300 transition-all duration-300 rounded-full`}
+            className={`text-2xl text-center font-bold text-gray-900 py-2 px-4 border-2 border-b-2 group-hover:border-gray-300 group-hover:text-3xl transition-all duration-500 rounded-full`}
           >
             About Me
           </h2>

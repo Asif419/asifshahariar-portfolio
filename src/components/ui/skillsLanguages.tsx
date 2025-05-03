@@ -6,7 +6,7 @@ const Languages = [
   { name: 'TypeScript', icon: '/assets/icons/typescript.png', expertise: 4 },
   { name: 'JavaScript', icon: '/assets/icons/javascript.png', expertise: 5 },
   { name: 'Python', icon: '/assets/icons/python.png', expertise: 5 },
-  { name: 'Java', icon: '/assets/icons/java.png', expertise: 3 },
+  { name: 'Java', icon: '/assets/icons/java.png', expertise: 4 },
   { name: 'C', icon: '/assets/icons/c.png', expertise: 4 },
 ]
 
@@ -27,7 +27,7 @@ export default function SkillsLanguages() {
             {/* Language icon */}
             <motion.div
               whileHover={{ scale: 1.1 }}
-              className="inline-block p-3 rounded-full cursor-pointer transition-all"
+              className="inline-block p-3 rounded-full cursor-pointer transition-all mb-2"
             >
               <img
                 src={item.icon}
