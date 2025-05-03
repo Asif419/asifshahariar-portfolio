@@ -54,9 +54,9 @@ export default function Experience() {
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Left Side (Designation) */}
-          <div className="md:w-1/3 flex sm:flex-row md:flex-col items-center md:gap-0.5">
+          <div className="md:w-1/3 flex flex-col items-center md:gap-0.5">
             <div
-              className="space-y-4 cursor-pointer px-4 py-2 transition-all hover:text-lg"
+              className="space-y-2 md:space-y-4 cursor-pointer px-4 py-2 transition-all hover:text-lg"
               onMouseEnter={() => {
                 setSelectedJob('ta-student-prefect');
                 setSoftwareEngineer(false);
@@ -113,7 +113,7 @@ export default function Experience() {
 
           {/* Right Side (Details of Job) */}
           <div className="md:w-2/3 flex items-center justify-center transition-all duration-500 ease-in-out">
-            <div className="border-l-4 border-gray-600 pl-4 bg-white p-6 rounded-md shadow-md w-full max-w-lg">
+            <div className="border-t-4 md:border-l-4 border-gray-600 pl-4 bg-white p-6 rounded-md shadow-md w-full max-w-lg">
               <h3 className="text-xl font-semibold text-gray-800">{jobs[selectedJob].title}</h3>
               <p className="text-gray-600">{jobs[selectedJob].company}</p>
               <p className="text-sm text-gray-500">{jobs[selectedJob].date}</p>

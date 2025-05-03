@@ -1,7 +1,9 @@
 'use client'
 
-export default function About() {
+// import { useState } from "react";
 
+export default function About() {
+  // const [isHovered, setIsHovered] = useState(false);
   return (
     <section
       id="about"
@@ -17,9 +19,8 @@ export default function About() {
           </h2>
           {/* Image that replaces the text on hover */}
           {/* <div
-            className={`absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-700 ease-in-out ${
-              isHovered ? 'opacity-100' : 'opacity-0'
-            }`}
+            className={`absolute top-0 left-0 w-full h-full flex justify-center items-center transition-all duration-700 ease-in-out ${isHovered ? 'opacity-100' : 'opacity-0'
+              }`}
           >
             <img
               src="/assets/images/asif-avatar-4.png"
