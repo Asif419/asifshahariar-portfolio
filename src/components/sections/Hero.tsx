@@ -35,7 +35,7 @@ export default function Hero() {
           >
             Passionate developer from Bangladesh, currently studying MSc in Data Science at Tampere University. Skilled in building fast and scalable web applications using modern technologies.
           </p>
-          <div>
+          <div className="flex gap-6">
             <a
               href="#contact"
               onMouseEnter={() => setHoverButton(true)}
@@ -43,6 +43,15 @@ export default function Hero() {
               className="inline-block border border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110"
             >
               Let&apos;s talk
+            </a>
+            <a
+              href="/assets/resume.pdf"
+              download
+              onMouseEnter={() => setHoverButton(true)}
+              onMouseLeave={() => setHoverButton(false)}
+              className="inline-block border border-gray-300 bg-white text-gray-800 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110"
+            >
+              Download Resume
             </a>
           </div>
         </div>

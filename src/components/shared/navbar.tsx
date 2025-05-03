@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const sections = [
   { label: "📄 About", href: "#about" },
@@ -15,12 +15,23 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
-  // Optional: scroll effect (for sticky shadow)
-  if (typeof window !== "undefined") {
-    window.onscroll = () => {
+  // Move the window scroll listener into useEffect
+  useEffect(() => {
+    const handleScroll = () => {
       setScrolled(window.scrollY > 20)
     }
-  }
+
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll)
+    }
+
+    // Cleanup on unmount
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll)
+      }
+    }
+  }, []) // Empty dependency array ensures this runs only once on mount and unmount
 
   return (
     <header className={`fixed top-0 z-50 w-full bg-white border-b ${scrolled ? 'shadow-sm' : ''}`}>

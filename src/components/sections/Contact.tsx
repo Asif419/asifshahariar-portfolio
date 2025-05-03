@@ -1,25 +1,36 @@
 'use client'
 
-import { useForm } from 'react-hook-form'
+import { useForm, SubmitHandler } from 'react-hook-form'
 import emailjs from 'emailjs-com'
-
 import { toast } from 'react-toastify';
+import Image from 'next/image';
 
+// Define the form data type
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
 
 export default function Contact() {
-  const { register, handleSubmit, reset } = useForm()
+  const { register, handleSubmit, reset } = useForm<FormData>()
 
-  const onSubmit = (data: any) => {
+  const onSubmit: SubmitHandler<FormData> = (data) => {
+    // Passing form data directly to emailjs without casting
     emailjs
       .send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID as string,
-        data,
+        {
+          name: data.name, 
+          email: data.email, 
+          message: data.message,
+        }, // Ensure the field names match with the template parameters
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY as string
       )
       .then(() => {
-        toast.success('I have recived you email!', {
-          position: "bottom-center",
+        toast.success('I have received your email!', {
+          position: "bottom-right",
           autoClose: 3000,
           hideProgressBar: true,
           closeOnClick: true,
@@ -46,9 +57,6 @@ export default function Contact() {
       {/* Left Side - Contact Form */}
       <div>
         <h2 className="text-3xl font-bold text-gray-900 mb-12">Contact Me</h2>
-        {/* <p className="text-gray-600 mb-8 text-lg">
-          I am currently open to full-stack developer roles in Europe. Feel free to reach out!
-        </p> */}
 
         <div className="max-w-2xl mx-auto flex flex-col md:flex-row gap-8">
           <div className="md:w-3/5 flex flex-col items-center gap-6">
@@ -96,7 +104,9 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="group relative"
             >
-              <img
+              <Image
+                width={118}
+                height={118}
                 src="/assets/icons/github.svg"
                 alt="GitHub"
                 className="w-12 h-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-125"
@@ -109,7 +119,9 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="group relative"
             >
-              <img
+              <Image
+                width={118}
+                height={118}
                 src="/assets/icons/linkedin.png"
                 alt="LinkedIn"
                 className="w-12 h-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-125"
@@ -122,7 +134,9 @@ export default function Contact() {
               rel="noopener noreferrer"
               className="group relative"
             >
-              <img
+              <Image
+                width={118}
+                height={118}
                 src="/assets/icons/facebook.png"
                 alt="Facebook"
                 className="w-12 h-12 rounded-full object-cover transition-transform duration-300 group-hover:scale-125"

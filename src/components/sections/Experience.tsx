@@ -56,6 +56,24 @@ export default function Experience() {
           {/* Left Side (Designation) */}
           <div className="md:w-1/3 flex sm:flex-row md:flex-col items-center md:gap-0.5">
             <div
+              className="space-y-4 cursor-pointer px-4 py-2 transition-all hover:text-lg"
+              onMouseEnter={() => {
+                setSelectedJob('ta-student-prefect');
+                setSoftwareEngineer(false);
+                setTeachingAssistant(true);
+                setContentCreator(false);
+              }}
+              onClick={() => {
+                setSelectedJob('ta-student-prefect')
+                setSoftwareEngineer(false);
+                setTeachingAssistant(true);
+                setContentCreator(false);
+              }}
+            >
+              <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:text-2xl transition-all duration-500 ease-in-out ${hoverTeachingAssistant ? "border-gray-300 text-2xl text-blue-600" : 'text-xl'
+                }`}>Teaching Assitant</p>
+            </div>
+            <div
               className={`space-y-4 cursor-pointer px-4 py-2 transition-all hover:text-lg`}
               onMouseEnter={() => {
                 setSelectedJob('software-engineer');
@@ -72,24 +90,6 @@ export default function Experience() {
             >
               <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:text-2xl transition-all duration-500 ease-in-out ${hoverSoftwareEngineer ? "border-gray-300 text-2xl text-blue-600" : 'text-xl'
                 }`}>Software Engineer</p>
-            </div>
-            <div
-              className="space-y-4 cursor-pointer px-4 py-2 transition-all hover:text-lg"
-              onMouseEnter={() => {
-                setSelectedJob('ta-student-prefect');
-                setSoftwareEngineer(false);
-                setTeachingAssistant(true);
-                setContentCreator(false);
-              }}
-              onClick={() => {
-                setSelectedJob('ta-student-prefect')
-                setSoftwareEngineer(false);
-                setTeachingAssistant(true);
-                setContentCreator(false);
-              }}
-            >
-             <p className={`font-semibold text-gray-800 py-2 px-4 border-2 border-gray-100 rounded-full hover:border-gray-300 hover:text-2xl transition-all duration-500 ease-in-out ${hoverTeachingAssistant ? "border-gray-300 text-2xl text-blue-600" : 'text-xl'
-                }`}>Teaching Assitant</p>
             </div>
             <div
               className="space-y-4 cursor-pointer px-4 py-2 transition-all hover:text-lg"
