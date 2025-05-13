@@ -1,14 +1,15 @@
 'use client'
 
+import Link from "next/link"
 import { useState, useEffect } from "react"
 
 const sections = [
-  { label: "📄 About", href: "#about" },
-  { label: "🎓 Education", href: "#education" },
-  { label: "🧠 Skills", href: "#skills" },
-  { label: "💼 Experience", href: "#experience" },
-  { label: "🚀 Projects", href: "#projects" },
-  { label: "💬 Let's Talk", href: "#contact" },
+  { label: "📄 About", href: "http://localhost:3000/#about" },
+  { label: "🎓 Education", href: "http://localhost:3000/#education" },
+  { label: "🧠 Skills", href: "http://localhost:3000/#skills" },
+  { label: "💼 Experience", href: "http://localhost:3000/#experience" },
+  { label: "🚀 Projects", href: "http://localhost:3000/#projects" },
+  { label: "💬 Let's Talk", href: "http://localhost:3000/#contact" },
 ]
 
 export default function Navbar() {
@@ -43,13 +44,13 @@ export default function Navbar() {
 
           <div className="hidden lg:flex gap-6 group">
             {sections.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-sm md:text-lg text-gray-700 border border-transparent hover:border-gray-400 hover:text-blue-600 font-medium transition-all duration-200 ease-in-out px-2 py-1 rounded-3xl transform group-hover/nav:opacity-40 group-hover/nav:scale-90 hover:opacity-100 hover:scale-110 hover:md:text-xl hover:font-bold"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

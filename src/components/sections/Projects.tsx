@@ -1,5 +1,5 @@
 'use client'
-
+import Link from "next/link"
 import Image from "next/image"
 
 
@@ -9,17 +9,18 @@ const projects = [
     description:
       "An online medicine e-commerce platform with user auth, admin panel, secure checkout, and full CRUD operations.",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind", "Firebase"],
-    github: "https://github.com/Asif419/medicine-shop-client",
-    image: "/assets/images/project-1.png", // Added image path
+    link: "/projects/project1",
+    image: "/assets/images/project-1.png", 
   },
   {
     title: "Book Store",
     description:
       "A dynamic book marketplace with real-time search, authentication, and a seamless shopping experience.",
     tech: ["Next.js", "React", "Redux Toolkit", "Tailwind", "JWT"],
-    github: "https://github.com/Asif419/book-store-client",
-    image: "/assets/images/project-2.png", // Added image path
+    link: "/projects/project2", 
+    image: "/assets/images/project-2.png",
   },
+
 ]
 
 export default function Projects() {
@@ -64,14 +65,12 @@ export default function Projects() {
                     ))}
                   </div>
                   {/* View Button */}
-                  <a
+                  <Link
+                    href={project.link} // Use Link component for navigation
                     className="text-sm md:text-base inline-block border border-blue-600 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 group-hover:scale-105"
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
                   >
-                    View
-                  </a>
+                    View Details
+                  </Link>
                 </div>
               </div>
             </div>
