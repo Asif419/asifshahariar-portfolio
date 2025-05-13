@@ -65,7 +65,7 @@ export default function Hero() {
 
             width={300} // Set the width you want
             height={300} // Set the height you want
-            src={hoverButton ? "/assets/images/asif-avatar-3.png" : hoverText ? "/assets/images/asif-avatar-2.png" : "/assets/images/asif-avatar.png"}
+            src="/assets/images/asif-avatar.jpg"
             alt="Asif Shahariar"
             className="max-w-xs w-full h-auto rounded-full border-4 border-white shadow-lg object-cover transition-all duration-1000 ease-in-out"
           />
