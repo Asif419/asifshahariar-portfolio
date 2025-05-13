@@ -4,7 +4,6 @@ import { useState } from "react";
 
 export default function Hero() {
   const [hoverText, setHoverText] = useState(false);
-  const [hoverButton, setHoverButton] = useState(false);
 
   return (
     <section
@@ -36,8 +35,6 @@ export default function Hero() {
             Passionate developer from Bangladesh, currently studying MSc in Data Science at Tampere University. Skilled in building fast and scalable web applications using modern technologies.
           </p>
           <div className="flex items-center md:items-start justify-center md:justify-start gap-6"
-            onMouseEnter={() => setHoverButton(true)}
-            onMouseLeave={() => setHoverButton(false)}
           >
             <a
               href="#contact"
