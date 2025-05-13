@@ -46,7 +46,7 @@ export default function Hero() {
               Let&apos;s talk
             </a>
             <a
-              href="/assets/resume.pdf"
+              href="/assets/Asif_Shahariar_Resume.pdf"
               download
               className={`inline-block border text-sm md:text-base border-gray-300 bg-white text-gray-700 font-medium rounded-full px-6 py-3 transition-all duration-500 ease-in-out hover:border-gray-400 hover:text-blue-600 hover:scale-110 ${hoverText ? "border-gray-400" : ""}`}
             >
