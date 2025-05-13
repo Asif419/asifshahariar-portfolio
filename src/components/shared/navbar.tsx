@@ -4,12 +4,12 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 
 const sections = [
-  { label: "📄 About", href: "http://localhost:3000/#about" },
-  { label: "🎓 Education", href: "http://localhost:3000/#education" },
-  { label: "🧠 Skills", href: "http://localhost:3000/#skills" },
-  { label: "💼 Experience", href: "http://localhost:3000/#experience" },
-  { label: "🚀 Projects", href: "http://localhost:3000/#projects" },
-  { label: "💬 Let's Talk", href: "http://localhost:3000/#contact" },
+  { label: "📄 About", href: "https://my-portfolio-lyart-pi-35.vercel.app/#about" },
+  { label: "🎓 Education", href: "https://my-portfolio-lyart-pi-35.vercel.app/#education" },
+  { label: "🧠 Skills", href: "https://my-portfolio-lyart-pi-35.vercel.app/#skills" },
+  { label: "💼 Experience", href: "https://my-portfolio-lyart-pi-35.vercel.app/#experience" },
+  { label: "🚀 Projects", href: "https://my-portfolio-lyart-pi-35.vercel.app/#projects" },
+  { label: "💬 Let's Talk", href: "https://my-portfolio-lyart-pi-35.vercel.app/#contact" },
 ]
 
 export default function Navbar() {
