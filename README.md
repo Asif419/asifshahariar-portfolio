@@ -8,7 +8,7 @@ Welcome to my personal portfolio! This is a showcase of my skills, achievements,
 
 You can view my live portfolio here:
 
-[View Live Portfolio]([https://your-vercel-url-here.vercel.app](https://my-portfolio-lyart-pi-35.vercel.app/)
+[View Live Portfolio]([https://your-vercel-url-here.vercel.app](https://my-portfolio-lyart-pi-35.vercel.app/))
 
 ---
 
@@ -88,7 +88,7 @@ Feel free to customize this portfolio by editing the sections like **About**, **
 ## 📧 Contact
 
 - **Email**: [asifshahariar419@gmail.com](mailto:asifshahariar419@gmail.com)
-- **LinkedIn**: [Asif Shahariar]([https://www.linkedin.com/in/asifshahariar/])
+- **LinkedIn**: [Asif Shahariar](https://www.linkedin.com/in/asifshahariar/)
 - **GitHub**: [Asif419](https://github.com/Asif419) 
 - **Facebook**: [Asif Shahariar](https://www.facebook.com/asifshahariar419/)
 
