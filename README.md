@@ -8,7 +8,7 @@ Welcome to my personal portfolio! This is a showcase of my skills, achievements,
 
 You can view my live portfolio here:
 
-[View Live Portfolio]([https://your-vercel-url-here.vercel.app](https://my-portfolio-lyart-pi-35.vercel.app/))
+[View Live Portfolio]([https://your-vercel-url-here.vercel.app])(https://my-portfolio-lyart-pi-35.vercel.app/)
 
 ---
 
